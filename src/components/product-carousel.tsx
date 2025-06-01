@@ -49,7 +49,7 @@ export function ProductCarousel({ products }: HomeProps) {
   return (
     <div className="relative mt-8">
       <div className="overflow-hidden pl-5 lg:pl-[260px]" ref={emblaRef}>
-        <div className="flex w-max touch-pan-x space-x-2 lg:w-full lg:space-x-12">
+        <div className="flex touch-pan-x space-x-2 lg:w-full lg:space-x-12">
           {isLoading
             ? Array.from({ length: 3 }).map((_, i) => (
                 <ProductCardSkeleton key={i} />
@@ -63,7 +63,8 @@ export function ProductCarousel({ products }: HomeProps) {
                   <div
                     key={product.id}
                     className={twMerge(
-                      'group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden rounded-lg p-1',
+                      'group relative flex flex-shrink-0 cursor-pointer flex-col items-center justify-center overflow-hidden rounded-lg p-1',
+                      'min-w-[350px]',
                       'lg:max-h-[656px] lg:min-h-[656px] lg:max-w-[696px] lg:min-w-[696px]',
                       'bg-linear-to-b from-[#1ea483] to-[#7465d4]',
                     )}
@@ -84,7 +85,7 @@ export function ProductCarousel({ products }: HomeProps) {
                       )}
                     >
                       <div className="flex flex-col">
-                        <strong className="text-lg text-gray-100 lg:text-xl">
+                        <strong className="text-sm text-gray-100 lg:text-xl">
                           {product.name}
                         </strong>
 
@@ -114,7 +115,7 @@ export function ProductCarousel({ products }: HomeProps) {
         onClick={scrollPrev}
         disabled={!prevEnabled}
         className={twMerge(
-          'absolute top-1/2 left-0 z-10 flex h-full w-[136px] -translate-y-1/2 items-center transition',
+          'absolute top-1/2 left-0 z-10 hidden h-full w-[136px] -translate-y-1/2 items-center transition lg:flex',
           'bg-linear-to-l from-0% to-[#121214]/50 to-75% p-2 text-gray-300 shadow-md',
           'disabled:opacity-30',
           !prevEnabled && 'pointer-events-none opacity-0',
@@ -126,7 +127,7 @@ export function ProductCarousel({ products }: HomeProps) {
         onClick={scrollNext}
         disabled={!nextEnabled}
         className={twMerge(
-          'absolute top-1/2 right-0 z-10 flex h-full w-[136px] -translate-y-1/2 items-center justify-end transition',
+          'absolute top-1/2 right-0 z-10 hidden h-full w-[136px] -translate-y-1/2 items-center justify-end transition lg:flex',
           'bg-linear-to-r from-0% to-[#121214]/50 to-75% p-2 text-gray-300 shadow-md',
           'disabled:opacity-30',
           !nextEnabled && 'pointer-events-none opacity-0',
