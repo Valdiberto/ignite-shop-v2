@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛍️ Ignite Shop V2
 
-## Getting Started
+Uma aplicação moderna de e-commerce desenvolvida com Next.js 14 (App Router), TypeScript e Tailwind CSS. Integrada ao Stripe para gerenciamento de produtos e pagamentos, oferece uma experiência de compra fluida e responsiva.
 
-First, run the development server:
+## 🌐 Deploy
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[Confira a versão em produção](https://ignite-shop-v2-eight.vercel.app/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+✅ Listagem de produtos com dados dinâmicos do Stripe
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+✅ Página de detalhes do produto com informações completas
 
-## Learn More
+✅ Carrinho de compras com gerenciamento de itens
 
-To learn more about Next.js, take a look at the following resources:
+✅ Checkout integrado ao Stripe
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+✅ Página de sucesso personalizada após a compra
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+✅ Animações suaves com Tailwind CSS
 
-## Deploy on Vercel
+✅ Skeletons de carregamento para melhor UX
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+✅ Responsividade total para dispositivos móveis
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📸 Capturas de Tela
+
+![HomePage](Homepage.png)
+![itemCart](image.png)
+
+## 🛠️ Tecnologias Utilizadas
+
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- Stripe API
+- Radix UI
+- shadcn/ui
+- Axios
+- Phosphor Icons
+- Embla Carousel
+
+## 📦 Como Começar
+
+Siga os passos abaixo para rodar o projeto localmente:
+
+1. Clone o repositório: `git clone https://github.com/Valdiberto/ignite-shop-v2.git`
+
+2. Navegue até a pasta do projeto: `cd ignite-shop-v2`
+
+3. Instale as dependências: `npm install`
+   ou
+   `yarn install`
+
+4. Configure as variáveis de ambiente:
+
+5. Crie um arquivo .env.local na raiz do projeto com as seguintes variáveis:
+
+env
+
+`NEXT_PUBLIC_STRIPE_PUBLIC_KEY=suachavepublica`
+
+`STRIPE_SECRET_KEY=suachavesecreta`
+
+`NEXT_URL=http://localhost:3000`
+
+🔐 As chaves do Stripe podem ser obtidas em dashboard.stripe.com
+
+6. Inicie o servidor de desenvolvimento:
+   `npm run dev`
+   ou
+   `yarn dev`
+
+Acesse http://localhost:3000 no seu navegador.
+
+## 🧪 Testes
+
+Atualmente, o projeto não possui testes automatizados. Contribuições são bem-vindas!
+
+## 📤 Deploy
+
+Recomendado com Vercel:
+
+Conecte seu repositório GitHub
+
+Configure as variáveis de ambiente
+
+Deploy automático a cada push
+
+## 📄 Licença
+
+Este projeto está licenciado sob a Licença MIT.
+
+## 🙋 Autor
+
+Feito com ❤️ por Valdiberto Mendes
