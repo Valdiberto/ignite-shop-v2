@@ -1,6 +1,23 @@
 import { ProductPageClient } from '@/components/product-page-client'
 import { stripe } from '@/lib/stripe'
+import { Metadata } from 'next'
 import Stripe from 'stripe'
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}): Promise<Metadata> {
+  const awaitedParams = await params
+
+  const idParams = awaitedParams.id
+
+  const product = await stripe.products.retrieve(idParams)
+  return {
+    title: product.name,
+    description: product.description ?? 'Detalhes do produto',
+  }
+}
 
 export default async function ProductPage({
   params,

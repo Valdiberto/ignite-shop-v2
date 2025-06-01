@@ -1,8 +1,13 @@
 import { stripe } from '@/lib/stripe'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import Stripe from 'stripe'
+
+export const metadata: Metadata = {
+  title: 'Compra efetuada',
+}
 
 export default async function Success({
   searchParams,

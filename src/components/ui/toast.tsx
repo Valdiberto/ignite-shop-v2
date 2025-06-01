@@ -4,7 +4,7 @@ import * as Toast from '@radix-ui/react-toast'
 import { tv, type VariantProps } from 'tailwind-variants'
 
 const toast = tv({
-  base: 'data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=closed]:slide-out-to-right-4 rounded-md shadow-lg p-4 w-[360px] border transition-all durantion-500 data-[state=open]:animate-in data-[state=open]:fade-in data-[state=open]:slide-in-from-right-4',
+  base: 'data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=closed]:slide-out-to-right-4 rounded-md shadow-lg p-4 w-[360px] border transition-all durantion-300 data-[state=open]:animate-in data-[state=open]:fade-in data-[state=open]:slide-in-from-right-4',
 
   variants: {
     variant: {
